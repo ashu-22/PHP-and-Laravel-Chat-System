@@ -1,0 +1,6 @@
+    @@ -0,1 ,, +2,6 @@
+    +tc.currentChannel.on('messageAdded', tc.addMessageToList);
+    +tc.currentChannel.on('typingStarted', showTypingStarted);
+    +tc.currentChannel.on('typingEnded', hideTypingStarted);
+    +tc.currentChannel.on('memberJoined', notifyMemberJoined);
+    +tc.currentChannel.on('memberLeft', notifyMemberLeft);
