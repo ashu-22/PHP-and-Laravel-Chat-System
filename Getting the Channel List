@@ -1,0 +1,9 @@
+    @@ -0,1 ,, +2,9 @@
+    +tc.messagingClient.getPublicChannels().then(function(channels) {
+    +tc.channelArray = tc.sortChannelsByName(channels.items);
+    +$channelList.text('');
+    +tc.channelArray.forEach(addChannel);
+    +if (typeof handler === 'function') {
+    +   handler();
+    +  }
+    +  });
