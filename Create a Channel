@@ -1,0 +1,10 @@
+@@ -0,1 ,, @@ 2,10
++tc.handleNewChannelInputKeypress = function(event) {
++if (event.keyCode === 13) {
++tc.messagingClient.createChannel({
++friendlyName: $newChannelInput.val()
++}).then(hideAddChannelInput);
++$(this).val('');
++event.preventDefault();
++}
++};
