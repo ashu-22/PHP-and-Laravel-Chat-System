@@ -1,0 +1,12 @@
+@@ -0,1 ,, +2,12 @@
++function selectChannel(event) {
++var target = $(event.target);
++var channelSid = target.data().sid;
++var selectedChannel = tc.channelArray.filter(function(channel) {
++return channel.sid === channelSid;
++})[0];
++if (selectedChannel === tc.currentChannel) {
++return;
++}
++setupChannel(selectedChannel);
++};
