@@ -1,0 +1,4 @@
+@@ -0,1 ,, 2,4 @@
++tc.messagingClient.on('channelAdded', $.throttle(tc.loadChannelList));
++tc.messagingClient.on('channelRemoved', $.throttle(tc.loadChannelList));
++tc.messagingClient.on('tokenExpired', refreshToken);
