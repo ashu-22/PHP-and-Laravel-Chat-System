@@ -1,0 +1,14 @@
+  @@ -0,1 ,, 2,14 @@
+  +function deleteCurrentChannel() {
+  +if (!tc.currentChannel) {
+  +return;
+  +}
+  +if (tc.currentChannel.sid === tc.generalChannel.sid) {
+  +alert('You cannot delete the general channel');
+  +return;
+  +}
+  +tc.currentChannel.delete().then(function(channel) {
+  +console.log('channel: '+ channel.friendlyName + ' deleted');
+  +setupChannel(tc.generalChannel);
+  +});
+  +}
